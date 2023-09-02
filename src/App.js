@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import { Route, Routes } from 'react-router-dom'
-import ProductList from "./Components/ProducList/ProductList";
+import MainPage from "./Components/ProducList/ProductList";
 import Checkout from './Components/Form/Form'
 const { getData } = require("./db/db");
 const foods = getData();
@@ -18,7 +18,7 @@ function App() {
   return (
    <div>
     <Routes>
-      <Route path={'/'} element={<ProductList/>}></Route>
+      <Route path={'/'} element={<MainPage />}></Route>
       <Route path={'form'} element={<Checkout/>}></Route>
     </Routes>
 

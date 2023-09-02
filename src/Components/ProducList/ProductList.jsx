@@ -9,7 +9,7 @@ const foods = getData();
 const shishki = getShiski();
 
 
-function ProductList() {
+function MainPage() {
   const [cartItems, setCartItems] = useState([]);
 
 
@@ -82,4 +82,4 @@ function ProductList() {
   );
 }
 
-export default ProductList;
+export default MainPage;

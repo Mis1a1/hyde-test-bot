@@ -13,14 +13,17 @@ function Footer({ cartItems}) {
   console.log(cartItems);
 
   return (
-    <div className={`${cartItems == 0 ? "hiden" : "footer" }`}>
-      <br /> <span className="summ">Сумма: <br></br>  {totalPrice}</span><span><img className="baht"src={baht}/></span>
+    <div className={`${cartItems == 0 ? "hiden-footer" : "footer" }`}>
+
+      <div className="summ-container"> Сумма:  {totalPrice} </div>
+      <div className="button-container">
       <Button
       type={"checkout"}
       disable={cartItems.length === 0 ? true : false}
       title={`${cartItems.length === 0 ? "Корзина пуста" : "Заказать"} `}
       onClick={onCheckout}
     ></Button>
+    </div>
     
     </div>
   );
