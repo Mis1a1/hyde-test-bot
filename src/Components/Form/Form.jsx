@@ -17,7 +17,7 @@ function Checkout() {
   const navigate = useNavigate();
 
   function onBack() {
-    navigate("//localhost:3000/");
+    navigate("/");
   }
 
 
