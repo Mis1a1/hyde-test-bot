@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
-import baht from "../../images/baht.svg";
+// import baht from "../../images/baht.svg";
 import { useNavigate } from "react-router-dom";
 import "./Footer.css";
 
@@ -13,7 +13,7 @@ function Footer({ cartItems}) {
   console.log(cartItems);
 
   return (
-    <div className={`${cartItems == 0 ? "hiden-footer" : "footer" }`}>
+    <div className={`${cartItems.length === 0 ? "hiden-footer" : "footer" }`}>
 
       <div className="summ-container"> Сумма:  {totalPrice} </div>
       <div className="button-container">

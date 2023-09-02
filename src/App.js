@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./App.css";
 import { Route, Routes } from 'react-router-dom'
 import MainPage from "./Components/ProducList/ProductList";
 import Checkout from './Components/Form/Form'
-const { getData } = require("./db/db");
-const foods = getData();
+
 
 const tele = window.Telegram.WebApp;
 
