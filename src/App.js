@@ -1,13 +1,42 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
-import { Route, Routes } from 'react-router-dom'
-import MainPage from "./Components/ProducList/ProductList";
-import Checkout from './Components/Form/Form'
+import { BrowserRouter as Router } from 'react-router-dom';
+import MyRoutes from '../src/routes/MyRoutes';
+const { data } = require("./db/db");
 
 
 const tele = window.Telegram.WebApp;
 
 function App() {
+  const productItems = data;
+  const [cartItems, setCartItems] = useState([]);
+  console.log(cartItems);
+  
+  const onAdd = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist) {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, quantity: exist.quantity + 1 } : x
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...product, quantity: 1 }]);
+    }
+  };
+
+  const onRemove = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist.quantity === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== product.id));
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, quantity: exist.quantity - 1 } : x
+        )
+      );
+    }
+  };
 
   useEffect(() => {
     tele.ready();
@@ -15,12 +44,12 @@ function App() {
 
 
   return (
-   <div>
-    <Routes>
-      <Route path={'/'} element={<MainPage />}></Route>
-      <Route path={'form'} element={<Checkout/>}></Route>
-    </Routes>
 
+   <div>
+    <Router>
+    <MyRoutes productItems={productItems} cartItems={cartItems} onRemove={onRemove} onAdd={onAdd}  />
+    </Router>
+    
    </div>
   );
 }

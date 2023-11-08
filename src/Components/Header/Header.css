@@ -22,6 +22,6 @@
     border-bottom-right-radius: 70px;
 
    }
- .li:hover, a:active{    
-   color: #1976d2;
+ .li:hover, a:active{ 
+   color: #DC143C	;
 }

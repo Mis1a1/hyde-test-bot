@@ -17,12 +17,16 @@
 }
 
 .card__title {
-  height: 30px;
+  max-height: 30px;
   text-align: center;
 }
 
 .card__title .card__price {
   font-weight: bold;
+}
+
+.card__descr {
+ height: 605x;
 }
 
 .image__container {
@@ -59,16 +63,15 @@
 }
 
 .card__badge {
+  background-color: black;
   width: 50px;
-  color: black;
+  color: white;
   font-weight: bold;
   text-align: center;
-  font-size: 23px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
-  opacity: 0.8;
   padding: 10px;
 }
 
