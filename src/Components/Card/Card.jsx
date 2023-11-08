@@ -1,7 +1,7 @@
 // Card.js
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { FaBahtSign } from "react-icons/fa6";
+// import { FaBahtSign } from "react-icons/fa6";
 import "./Card.css";
 import Button from "../Button/Button";
 
@@ -10,6 +10,7 @@ function Card({ product, onAdd, onRemove}) {
   const storedCount = +window.localStorage.getItem(`count_${productId}`) || 0;
   const [count, setCount] = useState(storedCount);
   const { title, Image, price, descr } = product;
+
 
 
 

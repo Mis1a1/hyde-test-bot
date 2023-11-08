@@ -1,5 +1,4 @@
 import React from 'react'
-import Footer from "../../Components/Footer/Footer";
 import { motion } from "framer-motion";
 import "./Cart.css";
 
