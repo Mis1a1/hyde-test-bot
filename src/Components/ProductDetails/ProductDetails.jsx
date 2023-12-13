@@ -48,7 +48,6 @@ function ProductDetails({ cartItems, onAdd, onRemove }) {
           <h1 className="title"> {thisProduct.title}</h1>
           <p className="price"> ${thisProduct.price}</p>
           <p className="descr">{thisProduct.descr}</p>
-          <div className="btn-title-container"></div>
           <div className="btn-container-add">
             <div className="buttons-container">
               <button className="left-button" onClick={addProduct}>

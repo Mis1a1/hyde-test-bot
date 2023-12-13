@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom';
 import MainPage from "../pages/MainPage/MainPage";
-import Checkout from '../Components/Form/Form';
+import Form from '../Components/Form/Form';
 import ProductDetails from '../Components/ProductDetails/ProductDetails';
-import Cart from '../Components/Cart/Cart';
+import Checkout from '../Components/Checkout/Checkout';
 import { AnimatePresence } from 'framer-motion';
 
 
@@ -16,9 +16,9 @@ function MyRoutes({productItems, cartItems, onAdd, onRemove}) {
     <AnimatePresence>
     <Routes location={location} key={location.pathname}>
     <Route path={'/'} element={<MainPage productItems={productItems} cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}></Route>
-    <Route path={'/form'} element={<Checkout cartItems={cartItems}/>}></Route>
+    <Route path={'/form'} element={<Form cartItems={cartItems}/>}></Route>
     <Route path='/products/:productId' element={ <ProductDetails cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />}></Route>
-    <Route path='cart' element={ <Cart cartItems={cartItems} />}> </Route>
+    <Route path='checkout' element={ <Checkout cartItems={cartItems} />}> </Route>
     </Routes>
     </AnimatePresence>
     </div>

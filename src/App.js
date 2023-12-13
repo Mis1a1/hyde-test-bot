@@ -9,8 +9,15 @@ const tele = window.Telegram.WebApp;
 
 function App() {
   const productItems = data;
-  const [cartItems, setCartItems] = useState([]);
-  console.log(cartItems);
+  const cartLocalStorage = JSON.parse(localStorage.getItem("cartList") || "[]")
+  const [cartItems, setCartItems] = useState(cartLocalStorage)
+
+  useEffect(() => {
+    localStorage.setItem("cartList", JSON.stringify(cartItems))
+  }, [cartItems])
+
+
+
   
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
@@ -20,6 +27,7 @@ function App() {
           x.id === product.id ? { ...exist, quantity: exist.quantity + 1 } : x
         )
       );
+      
     } else {
       setCartItems([...cartItems, { ...product, quantity: 1 }]);
     }
@@ -49,7 +57,6 @@ function App() {
     <Router>
     <MyRoutes productItems={productItems} cartItems={cartItems} onRemove={onRemove} onAdd={onAdd}  />
     </Router>
-    
    </div>
   );
 }

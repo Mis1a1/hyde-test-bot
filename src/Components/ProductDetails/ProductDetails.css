@@ -11,7 +11,6 @@
 }
 
 .modal-content {
- 
   flex-direction: row;
   justify-content: center;
   background-color: white;
@@ -64,6 +63,7 @@ color: black;
 .img-product{
   height: 350px;
   width: 350px;
+  border-radius: 25px;
 }
 .btn-container-add {
  
@@ -103,6 +103,7 @@ color: black;
 
 .descr{
   font-size: large;
+  height: 100px;
 }
 
 .price {

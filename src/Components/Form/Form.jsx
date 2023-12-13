@@ -11,16 +11,16 @@ import { motion } from "framer-motion";
 import "./Form.css";
 import { useNavigate } from "react-router-dom";
 
-function Checkout() {
+function Form() {
   const navigate = useNavigate();
 
   function onBack() {
-    navigate("/");
+    navigate("/checkout");
   }
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <Box p={{ p: 30 }} sx={{ m: +5 }}>
+      <Box p={{ p: 30 }} sx={{ m: +2 }}>
         <Button
           sx={{
             borderRadius: 3,
@@ -33,10 +33,11 @@ function Checkout() {
         >
           Назад
         </Button>
+        <Box sx={{ m: +4 }}>
         <br />
         <br />
         <Typography variant="h4" component="h1">
-          Ваш заказ
+          Оплата
         </Typography>
         <br></br>
         <FormControl fullWidth>
@@ -77,9 +78,10 @@ function Checkout() {
           </Button>
           <br />
         </FormControl>
+        </Box>
       </Box>
     </motion.div>
   );
 }
 
-export default Checkout;
+export default Form;
