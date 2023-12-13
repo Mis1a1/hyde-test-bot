@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion";
-import { useParams, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import { IoMdAdd } from "react-icons/io";
 import { BiMinus } from "react-icons/bi";
 import Button from "@mui/material/Button";
@@ -23,9 +23,9 @@ function Checkout ({cartItems, onAdd, onRemove })  {
     navigate("/form");
   }
 
-  const removeFromCart = () => {
-    onRemove();
-  };
+  // const removeFromCart = () => {
+  //   onRemove();
+  // };
 
     console.log(cartItems);
   return (
@@ -120,29 +120,3 @@ function Checkout ({cartItems, onAdd, onRemove })  {
 }
 
 export default Checkout;
-
-{/* <div>
-<h2>Shopping Cart</h2>
-<div>
-  <h3>Available Items</h3>
-  <ul>
-    {availableItems.map((item) => (
-      <li key={item.id}>
-        {item.name} - ${item.price}{' '}
-        <button onClick={() => addToCart(item)}>Add to Cart</button>
-      </li>
-    ))}
-  </ul>
-</div>
-<div>
-  <h3>Cart</h3>
-  <ul>
-    {cartItems.map((item) => (
-      <li key={item.id}>
-        {item.name} - ${item.price}{' '}
-        <button onClick={() => removeFromCart(item)}>Remove from Cart</button>
-      </li>
-    ))}
-  </ul>
-</div>
-</div> */}

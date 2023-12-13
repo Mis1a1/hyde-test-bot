@@ -2,9 +2,8 @@ import React from "react";
 // import Button from "../Button/Button";
 // import baht from "../../images/baht.svg";
 import { useNavigate } from "react-router-dom";
-import { BsFillCartFill } from "react-icons/bs";
 import { MdShoppingCartCheckout } from "react-icons/md";
-import { FaBahtSign } from "react-icons/fa6";
+// import { FaBahtSign } from "react-icons/fa6";
 import "./Footer.css";
 
 function Footer({ cartItems }) {
