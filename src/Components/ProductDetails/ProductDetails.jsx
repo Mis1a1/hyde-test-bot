@@ -4,7 +4,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./ProductDetails.css";
 import { data } from "../../db/db";
-import Footer from "../../Components/Footer/Footer";
 import { IoMdAdd } from "react-icons/io";
 import { BiMinus } from "react-icons/bi";
 import { AiFillCloseCircle } from "react-icons/ai";
