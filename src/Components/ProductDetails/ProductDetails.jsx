@@ -74,7 +74,6 @@ function ProductDetails({ cartItems, onAdd, onRemove }) {
             }}
           ></button>
         </div>
-        <Footer cartItems={cartItems} />
       </motion.div>
     </>
   );
