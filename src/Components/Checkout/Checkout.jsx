@@ -68,6 +68,8 @@ function Checkout({ cartItems, onAdd, onRemove }) {
             <BsFillCartCheckFill className="cart-icon-checkout" />
           </div>
 
+          <div className="container-list-item">
+
           {cartItems.length === 0 && (
             <div className="cart-items-empty">Ничего не выбрано</div>
           )}
@@ -105,6 +107,8 @@ function Checkout({ cartItems, onAdd, onRemove }) {
             </div>
               </div>
           ))}
+        </div>
+
         </div>
         <div className="button-forward-container-checkout-big">
           <Button

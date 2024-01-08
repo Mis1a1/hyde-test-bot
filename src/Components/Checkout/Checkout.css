@@ -1,13 +1,4 @@
-.cart-cantainer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    overflow: auto;
-  }
+
     
 .checkout-content {
         flex-direction: row;
@@ -178,4 +169,8 @@
     
     justify-content: flex-start;
     
+  }
+
+  .container-list-item {
+    flex-wrap: wrap;
   }
