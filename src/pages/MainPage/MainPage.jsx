@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 function MainPage({productItems, cartItems, onAdd, onRemove}) {
 
-  console.log(productItems);
+  console.log(cartItems);
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>

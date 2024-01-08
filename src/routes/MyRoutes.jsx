@@ -18,7 +18,7 @@ function MyRoutes({productItems, cartItems, onAdd, onRemove}) {
     <Route path={'/'} element={<MainPage productItems={productItems} cartItems={cartItems} onAdd={onAdd} onRemove={onRemove}/>}></Route>
     <Route path={'/form'} element={<Form cartItems={cartItems}/>}></Route>
     <Route path='/products/:productId' element={ <ProductDetails cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />}></Route>
-    <Route path='checkout' element={ <Checkout cartItems={cartItems} />}> </Route>
+    <Route path='checkout' element={ <Checkout cartItems={cartItems} onAdd={onAdd} onRemove={onRemove} />}> </Route>
     </Routes>
     </AnimatePresence>
     </div>

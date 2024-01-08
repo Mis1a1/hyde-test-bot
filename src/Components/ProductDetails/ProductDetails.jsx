@@ -7,6 +7,7 @@ import { data } from "../../db/db";
 import { IoMdAdd } from "react-icons/io";
 import { BiMinus } from "react-icons/bi";
 import { AiFillCloseCircle } from "react-icons/ai";
+import Footer from "../Footer/Footer";
 
 const products = data;
 
@@ -45,7 +46,7 @@ function ProductDetails({ cartItems, onAdd, onRemove }) {
           </div>
           <div className="product-info-container"></div>
           <h1 className="title"> {thisProduct.title}</h1>
-          <p className="price"> ${thisProduct.price}</p>
+          <p className="price"> ฿{thisProduct.price}</p>
           <p className="descr">{thisProduct.descr}</p>
           <div className="btn-container-add">
             <div className="buttons-container">
@@ -73,6 +74,7 @@ function ProductDetails({ cartItems, onAdd, onRemove }) {
             }}
           ></button>
         </div>
+        <Footer cartItems={cartItems} />
       </motion.div>
     </>
   );

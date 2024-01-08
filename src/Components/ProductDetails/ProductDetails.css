@@ -53,10 +53,11 @@ color: black;
   font-size: 1.5rem;
 }
 
-.modal-descr {
+.descr {
   color: dimgrey;
   font-style: italic;
   margin: 10px 0;
+  font-weight: bold;
 }
 
 
@@ -103,11 +104,12 @@ color: black;
 
 .descr{
   font-size: large;
-  height: 100px;
+  max-height: 50px;
 }
 
 .price {
-  font-size: large;
+  font-size: larger;
+  font-weight: bold;
 }
 
 .btn-title-container {

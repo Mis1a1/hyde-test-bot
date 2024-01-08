@@ -54,7 +54,7 @@
 .right-button-checkout {
     cursor: pointer;
     width: 50px;
-    height: 45px;
+    height: 46px;
     background-color: black;
     border-top-left-radius: 0rem;
     border-top-right-radius: 3rem;
@@ -64,7 +64,7 @@
 .left-button-checkout {
     cursor: pointer;
   width: 50px;
-  height: 45px;
+  height: 46px;
   background-color: black;
   border-top-left-radius: 3rem;
   border-top-right-radius: 0;
@@ -126,7 +126,15 @@
   }
   
   .title-product-checkout {
+    margin-top: 0;
+    padding-left: 10px;
     width: 130px;
+    height: 30px;
+  }
+  .price-checkout {
+    left: -10px;
+    margin-top: 25px;
+    height: 25px;
   }
 
   .price-total-container {
@@ -143,4 +151,31 @@
   }
   .price-total-checkout {
    
+  }
+
+  .button-container-checkout {
+    display: flex;
+    height: 26px;
+    padding-top: 25px;
+    padding-right: 10px;
+    
+  }
+  .checkout-badge {
+    background-color: black;
+    width: 50px;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 10px;
+  }
+
+  .title-and-price-container {
+    
+    justify-content: flex-start;
+    
   }

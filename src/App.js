@@ -46,6 +46,8 @@ function App() {
     }
   };
 
+
+
   useEffect(() => {
     tele.ready();
   });
@@ -55,7 +57,7 @@ function App() {
 
    <div>
     <Router>
-    <MyRoutes productItems={productItems} cartItems={cartItems} onRemove={onRemove} onAdd={onAdd}  />
+    <MyRoutes productItems={productItems} cartItems={cartItems} onRemove={onRemove} onAdd={onAdd}   />
     </Router>
    </div>
   );

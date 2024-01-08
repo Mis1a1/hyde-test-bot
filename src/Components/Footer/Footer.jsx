@@ -16,7 +16,7 @@ function Footer({ cartItems }) {
 
   return (
     <div className={`${cartItems.length === 0 ? "hiden-footer" : "footer"}`}>
-      <div className="summ-container"> Сумма: {totalPrice} </div>
+      <div className="summ-container"> ฿{totalPrice} </div>
       <div className="button-container">
         <button className="button-cart" onClick={onCart}>
           {" "}
